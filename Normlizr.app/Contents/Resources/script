@@ -22,7 +22,7 @@ files.each do |file|
   org_file = Shellwords.escape(file)
 
   output_path = output_folder+"/"+org_file.split("/").last[0..-5]
-  final_filename = org_file.split("/").last[0..-5].gsub(/[^a-zA-Z0-9\s+]/,'').gsub(/\s+/, '_')
+  final_filename = org_file.split("/").last[0..-5].gsub(/[^_a-zA-Z0-9\s+]/,'').gsub(/\s+/, '_')
   final_path = output_folder+"/"+ final_filename
   puts output_path
 
